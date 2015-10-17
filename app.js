@@ -7,8 +7,8 @@ var days,
 		seconds;
 
 var countdownContainer = document.getElementById('countdown_container'),
-    dueDateElement = document.getElementById('due_date'),
-    todaysDateElement = document.getElementById('todays_date'),
+    // dueDateElement = document.getElementById('due_date'),
+    // todaysDateElement = document.getElementById('todays_date'),
 		nodes = countdownContainer.children;
 
 
@@ -29,13 +29,13 @@ setInterval(function(){
 	// countdown.innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S";
 
 nodes[0].innerHTML = days;
-nodes[2].innerHTML = hours;
-nodes[4].innerHTML = minutes;
-nodes[6].innerHTML = seconds.toString().length < 2 ? "0" + seconds : seconds;
+nodes[1].innerHTML = hours;
+nodes[2].innerHTML = minutes;
+nodes[3].innerHTML = seconds.toString().length < 2 ? "0" + seconds : seconds;
 
 
-dueDateElement.innerHTML = "Due: " + dueDate.toDateString();
-todaysDateElement.innerHTML = "Today: " + currentDate.toDateString();
+// dueDateElement.innerHTML = "Due: " + dueDate.toDateString();
+// todaysDateElement.innerHTML = "Today: " + currentDate.toDateString();
 
 
 }, 1000);
